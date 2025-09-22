@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Form Filling</title>
+   
+    <script>
+        function handleSubmit() {
+            let name = document.getElementById("name").value;
+            let roll = document.getElementById("number").value;
+
+            alert("Form submitted!\nName: " + name + "\nRoll Number: " + roll);
+        }
+    </script>
+</head>
+<body style="text-align:center;">
+    <h2>Event Form</h2>
+    <form onsubmit="event.preventDefault(); handleSubmit();">
+        <label for="name">Name</label>
+        <input type="text" id="name"><br><br>
+
+        <label for="number">Roll Number</label>
+        <input type="number" id="number"><br><br>
+
+        <label for="branch">Branch</label><br><br>
+
+        <label for="cse">CSE</label>
+        <input type="checkbox" id="cse"><br><br>
+
+        <label for="csit">CSIT</label>
+        <input type="checkbox" id="csit"><br><br>
+
+        <label for="ece">ECE</label>
+        <input type="checkbox" id="ece"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
